@@ -31,11 +31,13 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^5.0.11",
     "@storybook/react": "^5.0.5",
     "@types/next": "^8.0.5",
     "@types/react": "^16.8.17",
     "@types/storybook__react": "^4.0.1",
     "@types/styled-components": "^4.1.14",
-    "@zeit/next-typescript": "^1.1.1"
+    "@zeit/next-typescript": "^1.1.1",
+    "react-docgen-typescript-loader": "^3.1.0"
   }
 }
