@@ -1,10 +1,16 @@
+import R from 'ramda';
 import Layout from '../shared/components/MyLayout';
 import { withRouter } from 'next/router';
 import Markdown from 'react-markdown';
 
+const defaultQuery = {
+  title: 'hello'
+};
+const getQuery = R.curry(R.pathOr)(defaultQuery)(['router', 'query']);
+
 export default withRouter(props => (
   <Layout>
-    <h1>{props.router.query.title}</h1>
+    <h1>{getQuery(props).title}</h1>
     <div className="markdown">
       <Markdown
         source={`
@@ -18,7 +24,7 @@ And here's the content.
      `}
       />
     </div>
-    <style jsx global>{`
+    {/* <style jsx global>{`
       .markdown {
         font-family: 'Arial';
       }
@@ -37,6 +43,6 @@ And here's the content.
         padding: 0;
         text-transform: uppercase;
       }
-    `}</style>
+    `}</style> */}
   </Layout>
 ));
