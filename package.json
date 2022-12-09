@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/dbfilm/gallery#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.3",
     "ramda": "^0.26.1",
